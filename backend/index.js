@@ -8,7 +8,7 @@ const app=express();
 app.use(cors());
 app.use(express.json());
 
-const url="https://localhost:27017/Quiz";
+const url="mongodb://localhost:27017/Quiz";
 mongoose.connect(url)
 
 .then((_)=>
@@ -21,6 +21,6 @@ mongoose.connect(url)
 
 app.use(question);
 
-app.listen(5000,()=>{
-    console.log("Server is running on port 5000");
+app.listen(3000,()=>{
+    console.log("Server is running on port 3000");
 })
