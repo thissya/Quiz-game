@@ -1,15 +1,18 @@
-import { useState ,useEffect} from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { useState } from 'react'
+import {BrowserRouter,Routes,Route} from "react-router-dom"
 import Home from './pages/Home'
 import Quiz from './pages/Quiz'
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      
+      <BrowserRouter>
+        <Routes>
+          <Route path='/home' element={<Home/>}/> 
+          <Route path='/quiz' element={<Quiz/>}/>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
