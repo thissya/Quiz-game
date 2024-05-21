@@ -6,7 +6,7 @@ const {
     addQuestion
 }=require('../controller/ques');
 
-router.get('/',getAllQuestions);
-router.post('/',addQuestion);
+router.get('/get',getAllQuestions);
+router.post('/post',addQuestion);
 
 module.exports=router;
