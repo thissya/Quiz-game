@@ -5,11 +5,19 @@ import Questionbox from '../components/Questionbox';
 
 function Quiz() {
   const [question,setQuestions]=useState([]);
-  
-  const myobj = {
-    question:"Sample Question"
+  const [selectedOption, setSelectedOption] = useState(null);
 
+  const myobj = {
+    ques:"Sample Question",
+    opt1:"Option 1",
+    opt2:"Option 2",
+    opt3:"Option 3",
+    opt4:"Option 4"
   }
+  
+  useEffect(() => {
+    console.log('Selected option:', selectedOption);
+  }, [selectedOption]);
 
   useEffect(() => {
     const fetchQuestions = async () => {
@@ -27,7 +35,7 @@ function Quiz() {
 
   return (
     <>
-    <Questionbox props={question[0]}/>
+    <Questionbox props={myobj} func={setSelectedOption}/>
     </>
 
   );
