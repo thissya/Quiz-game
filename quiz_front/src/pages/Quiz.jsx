@@ -12,6 +12,10 @@ function Quiz() {
     console.log('Selected option:', selectedOption);
   }, [selectedOption]);
 
+  useEffect(()=>{
+    setSelectedOption(null);
+  },[CurrentQuestionIndex]);
+
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
@@ -49,7 +53,8 @@ function Quiz() {
             handleNextQuestion={handleNextQuestion}
             handlePrevQuestion={handlePrevQuestion}
             isPrevDisabled={CurrentQuestionIndex === 0}
-            isNextDisabled={CurrentQuestionIndex === questions.length - 1} />  
+            isNextDisabled={CurrentQuestionIndex === questions.length - 1}
+            selectedOption={selectedOption} />  
 
     </>
   );

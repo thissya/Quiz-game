@@ -1,17 +1,17 @@
-const Questionbox = ({ props, func ,handleNextQuestion ,handlePrevQuestion ,isPrevDisabled ,isNextDisabled }) => {
+const Questionbox = ({ props, func ,handleNextQuestion ,handlePrevQuestion ,isPrevDisabled ,isNextDisabled,selectedOption }) => {
     const {ques,opt1,opt2,opt3,opt4}=props;
     const handleOptionChange = async (changeEvent) => {
         func(changeEvent.target.value);
     }
-
+    
     return (
         <>
-            <div className='flex h-screen flex-col items-center justify-center'>
+            <div className='flex h-screen flex-col items-center justify-center bg-black'>
                 <div className='h-[70vh] w-[70vw]  text-center m-auto' >
-                    <div className='font-bold text-2xl'>Quiz Questions</div>
+                    <div className='font-bold text-2xl text-yellow-300 mt-5'>Quiz Questions</div>
                     <div className='h-[80%] w-[80%] border-2 rounded-[30px] p-4 m-auto '>
                         <div className='text-left'>
-                            <div className='text-2xl ml-6 font-medium mt-5'>
+                            <div className='text-2xl ml-6 font-medium mt-5 text-yellow-300'>
                                 {ques}
                             </div>
                         </div>
@@ -19,20 +19,20 @@ const Questionbox = ({ props, func ,handleNextQuestion ,handlePrevQuestion ,isPr
                             <div className='flex flex-col text-left justify-right w-full'>
                                 <form>
                                     <label class="has-[:checked]:bg-indigo-50 m-1 has-[:checked]:text-indigo-900 has-[:checked]:ring-indigo-200  flex items-center w-full text-left p-3 rounded-lg border-2 transition-all peer-checked:bg-indigo-50 peer-checked:text-indigo-900 peer-checked:ring-indigo-200">
-                                        <span>{opt1}</span>
-                                        <input type="radio" value={opt1} onChange={handleOptionChange} class="ml-auto checked:border-indigo-500 peer" name="payment" />
+                                        <span className="text-yellow-600">{opt1}</span>
+                                        <input type="radio" checked={selectedOption===opt1} value={opt1} onChange={handleOptionChange} class="ml-auto checked:border-indigo-500 peer" name="payment" />
+                                    </label> 
+                                    <label class="has-[:checked]:bg-indigo-50 m-1 has-[:checked]:text-indigo-900 has-[:checked]:ring-indigo-200  flex items-center w-full text-left p-3 rounded-lg border-2 transition-all peer-checked:bg-indigo-50 peer-checked:text-indigo-900 peer-checked:ring-indigo-200">
+                                        <span className="text-yellow-600">{opt2}</span>
+                                        <input type="radio" checked={selectedOption===opt2} value={opt2} onChange={handleOptionChange} class="ml-auto  checked:border-indigo-500 peer" name="payment" />
                                     </label>
                                     <label class="has-[:checked]:bg-indigo-50 m-1 has-[:checked]:text-indigo-900 has-[:checked]:ring-indigo-200  flex items-center w-full text-left p-3 rounded-lg border-2 transition-all peer-checked:bg-indigo-50 peer-checked:text-indigo-900 peer-checked:ring-indigo-200">
-                                        <span>{opt2}</span>
-                                        <input type="radio" value={opt2} onChange={handleOptionChange} class="ml-auto  checked:border-indigo-500 peer" name="payment" />
+                                        <span className="text-yellow-600">{opt3}</span>
+                                        <input type="radio"checked={selectedOption===opt3} onChange={handleOptionChange} value={opt3} class="ml-auto checked:border-indigo-500 peer" name="payment" />
                                     </label>
                                     <label class="has-[:checked]:bg-indigo-50 m-1 has-[:checked]:text-indigo-900 has-[:checked]:ring-indigo-200  flex items-center w-full text-left p-3 rounded-lg border-2 transition-all peer-checked:bg-indigo-50 peer-checked:text-indigo-900 peer-checked:ring-indigo-200">
-                                        <span>{opt3}</span>
-                                        <input type="radio" onChange={handleOptionChange} value={opt3} class="ml-auto checked:border-indigo-500 peer" name="payment" />
-                                    </label>
-                                    <label class="has-[:checked]:bg-indigo-50 m-1 has-[:checked]:text-indigo-900 has-[:checked]:ring-indigo-200  flex items-center w-full text-left p-3 rounded-lg border-2 transition-all peer-checked:bg-indigo-50 peer-checked:text-indigo-900 peer-checked:ring-indigo-200">
-                                        <span>{opt4}</span>
-                                        <input type="radio" onChange={handleOptionChange} value={opt4} class="ml-auto checked:border-indigo-500 peer" name="payment" />
+                                        <span className="text-yellow-600">{opt4}</span>
+                                        <input type="radio" checked={selectedOption===opt4} onChange={handleOptionChange} value={opt4} class="ml-auto checked:border-indigo-500 peer" name="payment" />
                                     </label>
 
                                 </form>
