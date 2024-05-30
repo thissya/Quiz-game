@@ -4,17 +4,10 @@ import '../style.css'
 import Questionbox from '../components/Questionbox';
 
 function Quiz() {
-  const [question,setQuestions]=useState([]);
+  const [questions,setQuestions]=useState([]);
+  const [CurrentQuestionIndex,setCurrentQuestionIndex]=useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
 
-  const myobj = {
-    ques:"Sample Question",
-    opt1:"Option 1",
-    opt2:"Option 2",
-    opt3:"Option 3",
-    opt4:"Option 4"
-  }
-  
   useEffect(() => {
     console.log('Selected option:', selectedOption);
   }, [selectedOption]);
@@ -23,7 +16,7 @@ function Quiz() {
     const fetchQuestions = async () => {
       try {
         const response = await axios.get('http://localhost:3000/get');
-        console.log(response.dat)
+        console.log(response.data)
         setQuestions(response.data);
       } catch (error) {
         console.error('Error fetching questions:', error);
@@ -33,12 +26,32 @@ function Quiz() {
     fetchQuestions();
   }, []);
 
+  const handleNextQuestion=()=>{
+      setCurrentQuestionIndex((prevIndex)=>Math.min(prevIndex+1,questions.length-1));
+  };
+
+  const handlePrevQuestion=()=>{
+      setCurrentQuestionIndex((prevIndex)=>Math.max(prevIndex-1,0));
+  };
+
+  const currentQuestion=questions[CurrentQuestionIndex] || {
+    ques: 'Loading...',
+    opt1: '',
+    opt2: '',
+    opt3: '',
+    opt4: ''
+  };
 
   return (
     <>
-    <Questionbox props={myobj} func={setSelectedOption}/>
-    </>
+      <Questionbox props={currentQuestion} 
+            func={setSelectedOption}
+            handleNextQuestion={handleNextQuestion}
+            handlePrevQuestion={handlePrevQuestion}
+            isPrevDisabled={CurrentQuestionIndex === 0}
+            isNextDisabled={CurrentQuestionIndex === questions.length - 1} />  
 
+    </>
   );
 }
 
