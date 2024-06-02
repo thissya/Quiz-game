@@ -1,7 +1,18 @@
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
+
 const Questionbox = ({ props, func ,handleNextQuestion ,handlePrevQuestion ,isPrevDisabled ,isNextDisabled,selectedOption }) => {
     const {ques,opt1,opt2,opt3,opt4}=props;
+
+    const navigate=useNavigate();
+
     const handleOptionChange = async (changeEvent) => {
         func(changeEvent.target.value);
+    }
+
+    const handleSubmit=()=>{
+        navigate('/result');
     }
     
     return (
@@ -49,7 +60,7 @@ const Questionbox = ({ props, func ,handleNextQuestion ,handlePrevQuestion ,isPr
 
                     </div>
 
-                    <button className='bg-blue-500 text-white p-2 rounded-lg mt-3 w-[15%]'>Submit</button>
+                    <button className='bg-blue-500 text-white p-2 rounded-lg mt-3 w-[15%]' onClick={handleSubmit}>Submit</button>
                 </div>
             </div>
         </>
