@@ -71,10 +71,9 @@ function Quiz() {
             handleNextQuestion={handleNextQuestion}
             handlePrevQuestion={handlePrevQuestion}
             isPrevDisabled={CurrentQuestionIndex === 0}
-            isNextDisabled={CurrentQuestionIndex === questions.length - 1}
+            isNextDisabled={CurrentQuestionIndex === questions.length-1}
             selectedOption={selectedOption}
             handleSubmit={handleSubmit} />  
-
     </>
   );
 }

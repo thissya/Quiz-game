@@ -13,7 +13,7 @@ const Questionbox = ({ props, func ,handleNextQuestion ,handlePrevQuestion ,isPr
         <>
             <div className='flex h-screen flex-col items-center justify-center bg-black'>
                 <div className='h-[70vh] w-[70vw]  text-center m-auto' >
-                    <div className='font-bold text-2xl text-yellow-300 mt-5'>Quiz Questions</div>
+                    <div className='font-bold text-2xl text-yellow-300 mt-5 mb-5'>Quiz Questions</div>
                     <div className='h-[80%] w-[80%] border-2 rounded-[30px] p-4 m-auto '>
                         <div className='text-left'>
                             <div className='text-2xl ml-6 font-medium mt-5 text-yellow-300'>
@@ -44,7 +44,7 @@ const Questionbox = ({ props, func ,handleNextQuestion ,handlePrevQuestion ,isPr
                         </div>
                         <div className='flex justify-between'>
                             <div className='mt-10'>
-                                <button className='bg-blue-500 text-white p-2 rounded-lg mt-5 w-20 h-10' onClick={handlePrevQuestion} disabled={isPrevDisabled}>Previous</button>
+                                <button className='bg-blue-500  text-white p-2 rounded-lg mt-5 w-20 h-10' onClick={handlePrevQuestion} disabled={isPrevDisabled}>Previous</button>
                             </div>
                             <div className ='mt-10'>
                                 <button className='bg-blue-500 text-white p-2 rounded-lg mt-5 w-20 h-10' onClick={handleNextQuestion} disabled={isNextDisabled}>Next</button>

@@ -10,6 +10,16 @@ module.exports.getAllQuestions=async(req,res)=>{
     }
 }
 
+module.exports.deleteAllQuestions = async (req, res) => {
+    try {
+        await Question.deleteMany({});
+        res.status(200).send({ message: "All questions have been deleted successfully." });
+    } catch (err) {
+        res.status(400).send(err.message);
+    }
+}
+
+
 module.exports.addQuestion=async(req,res)=>{
     try{
         const question=await Question.create(req.body);

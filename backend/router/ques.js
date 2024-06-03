@@ -3,10 +3,12 @@ const router=express.Router();
 
 const {
     getAllQuestions,
-    addQuestion
+    addQuestion,
+    deleteAllQuestions
 }=require('../controller/ques');
 
 router.get('/get',getAllQuestions);
 router.post('/post',addQuestion);
+router.delete('/delete',deleteAllQuestions);
 
 module.exports=router;
