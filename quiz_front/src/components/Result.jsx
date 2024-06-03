@@ -8,10 +8,10 @@ const Resultpage=()=>{
     return (
         <div className='flex h-screen flex-col items-center justify-center bg-black'>
         <div className='h-[70vh] w-[70vw] text-center m-auto'>
-            <div className='font-bold text-2xl text-yellow-300 mt-5'>Quiz Results</div>
+            <div className='font-bold text-2xl text-yellow-300 mt-5 mb-10'>Quiz Results</div>
             <div className='h-[80%] w-[80%] border-2 rounded-[30px] p-4 m-auto'>
                 <div className='text-left'>
-                    <div className='text-2xl ml-6 font-medium mt-5 text-yellow-300'>
+                    <div className='text-2xl ml-6 font-medium mt-5 text-center text-yellow-300'>
                         Your Score:{score}
                     </div>
                 </div>
@@ -20,5 +20,4 @@ const Resultpage=()=>{
     </div>
     )
 }
-
-export default Resultpage
+export default Resultpage;
