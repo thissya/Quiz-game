@@ -92,7 +92,7 @@ const btstyle={
   return (
     <>
        {!isStarted&&
-       <div style={instyle}>
+       <div className=" caret-transparent" style={instyle}>
           <h1>Quiz Game</h1>
           <button onClick={()=>{setisStarted(true)}} style={btstyle}>Start Quiz</button>
         </div>

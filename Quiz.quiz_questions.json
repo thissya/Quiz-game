@@ -1,0 +1,228 @@
+[{
+  "_id": {
+    "$oid": "665e02769a984e4fc1c0ebe6"
+  },
+  "ques": "What does AI stand for?",
+  "opt1": "Automated Intelligence",
+  "opt2": "Artificial Intelligence",
+  "opt3": "Advanced Intelligence",
+  "opt4": "Autonomous Intelligence",
+  "ans": "Artificial Intelligence",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e02769a984e4fc1c0ebe9"
+  },
+  "ques": "What is a neural network?",
+  "opt1": "A type of biological brain structure",
+  "opt2": "A type of computer hardware",
+  "opt3": "A computational model inspired by the human brain",
+  "opt4": "A networking protocol",
+  "ans": "A computational model inspired by the human brain",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e02769a984e4fc1c0ebe8"
+  },
+  "ques": "What does the term 'machine learning' refer to?",
+  "opt1": "Machines that can perform any task without human intervention",
+  "opt2": "Machines that learn from data to improve their performance",
+  "opt3": "Machines that can replicate human emotions",
+  "opt4": "Machines that can solve all problems",
+  "ans": "Machines that learn from data to improve their performance",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e02769a984e4fc1c0ebe7"
+  },
+  "ques": "Which keyword is used to prevent any changes in the variable within a C program?",
+  "opt1": "const",
+  "opt2": "volatile",
+  "opt3": "immutable",
+  "opt4": "static",
+  "ans": "const",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e02769a984e4fc1c0ebec"
+  },
+  "ques": "Who is considered the father of AI?",
+  "opt1": "Alan Turing",
+  "opt2": "John McCarthy",
+  "opt3": "Marvin Minsky",
+  "opt4": "Herbert Simon",
+  "ans": "John McCarthy",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e02769a984e4fc1c0ebed"
+  },
+  "ques": "Which of the following is a correct syntax to include a user-defined header file in C?",
+  "opt1": "#include \"file.h\"",
+  "opt2": "#include <file>",
+  "opt3": "#include <file.h>",
+  "opt4": "#include file.h",
+  "ans": "#include \"file.h\"",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e02769a984e4fc1c0ebee"
+  },
+  "ques": "What is an example of natural language processing (NLP)?",
+  "opt1": "Image recognition",
+  "opt2": "Speech synthesis",
+  "opt3": "Text translation",
+  "opt4": "Object detection",
+  "ans": "Text translation",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e02769a984e4fc1c0ebef"
+  },
+  "ques": "Which of the following data types is not a basic data type in C?",
+  "opt1": "int",
+  "opt2": "float",
+  "opt3": "char",
+  "opt4": "boolean",
+  "ans": "boolean",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e02769a984e4fc1c0ebf0"
+  },
+  "ques": "Which of the following is a type of machine learning?",
+  "opt1": "Supervised learning",
+  "opt2": "Semi-supervised learning",
+  "opt3": "Unsupervised learning",
+  "opt4": "All of the above",
+  "ans": "All of the above",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e02769a984e4fc1c0ebf1"
+  },
+  "ques": "Which of the following is not a valid storage class in C?",
+  "opt1": "auto",
+  "opt2": "extern",
+  "opt3": "register",
+  "opt4": "volatile",
+  "ans": "volatile",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e02769a984e4fc1c0ebf2"
+  },
+  "ques": "What is the Turing Test used for?",
+  "opt1": "Measuring the speed of a computer",
+  "opt2": "Determining if a machine can exhibit intelligent behavior equivalent to a human",
+  "opt3": "Checking the security of a network",
+  "opt4": "Evaluating the efficiency of an algorithm",
+  "ans": "Determining if a machine can exhibit intelligent behavior equivalent to a human",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e02769a984e4fc1c0ebf3"
+  },
+  "ques": "Which operator is used to access the value of a variable through a pointer in C?",
+  "opt1": "*",
+  "opt2": "&",
+  "opt3": "->",
+  "opt4": ".",
+  "ans": "*",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e02769a984e4fc1c0ebf4"
+  },
+  "ques": "What is the primary goal of AI?",
+  "opt1": "To replace human intelligence",
+  "opt2": "To enhance human capabilities",
+  "opt3": "To create autonomous robots",
+  "opt4": "To understand natural phenomena",
+  "ans": "To enhance human capabilities",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e02769a984e4fc1c0ebf5"
+  },
+  "ques": "Which function is used to compare two strings in C?",
+  "opt1": "strcmp()",
+  "opt2": "strcat()",
+  "opt3": "strcpy()",
+  "opt4": "strlen()",
+  "ans": "strcmp()",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e02769a984e4fc1c0ebf6"
+  },
+  "ques": "What is a chatbot?",
+  "opt1": "A robot that performs physical tasks",
+  "opt2": "An AI that can engage in conversation with humans",
+  "opt3": "A type of malware",
+  "opt4": "A machine that translates languages",
+  "ans": "An AI that can engage in conversation with humans",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e02769a984e4fc1c0ebea"
+  },
+  "ques": "What is the output of the following code?\n#include <stdio.h>\nint main() {\n   int a = 5;\n   printf(\"%d\", a++);\n   return 0;\n}",
+  "opt1": "4",
+  "opt2": "5",
+  "opt3": "6",
+  "opt4": "Compilation error",
+  "ans": "5",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e02769a984e4fc1c0ebeb"
+  },
+  "ques": "What is the default return type of the main() function in C?",
+  "opt1": "void",
+  "opt2": "char",
+  "opt3": "int",
+  "opt4": "float",
+  "ans": "int",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e02769a984e4fc1c0ebf7"
+  },
+  "ques": "Which of the following is a common programming language used for AI?",
+  "opt1": "JavaScript",
+  "opt2": "HTML",
+  "opt3": "Python",
+  "opt4": "SQL",
+  "ans": "Python",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665e02769a984e4fc1c0ebf8"
+  },
+  "ques": "What is the purpose of the 'break' statement in C?",
+  "opt1": "To exit from a loop or switch statement",
+  "opt2": "To stop the execution of the entire program",
+  "opt3": "To pass control to the next iteration of the loop",
+  "opt4": "To exit from the current function",
+  "ans": "To exit from a loop or switch statement",
+  "__v": 0
+}]

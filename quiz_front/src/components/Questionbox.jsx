@@ -11,7 +11,7 @@ const Questionbox = ({ props, func ,handleNextQuestion ,handlePrevQuestion ,isPr
     
     return (
         <>
-            <div className='flex h-screen flex-col items-center justify-center bg-black'>
+            <div className='flex h-screen flex-col items-center justify-center caret-transparent bg-black'>
                 <div className='h-[70vh] w-[70vw]  text-center m-auto' >
                     <div className='font-bold text-2xl text-yellow-300 mt-5 mb-5'>Quiz Questions</div>
                     <div className='h-[80%] w-[80%] border-2 rounded-[30px] p-4 m-auto '>
