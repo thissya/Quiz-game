@@ -44,11 +44,11 @@ const Questionbox = ({ props, func ,handleNextQuestion ,handlePrevQuestion ,isPr
                         </div>
                         <div className='flex justify-between'>
                             <div className='mt-10'>
-                                <button className='bg-blue-500  text-white p-2 rounded-lg mt-5 w-20 h-10' onClick={handlePrevQuestion} disabled={isPrevDisabled}>Previous</button>
+                            {!isPrevDisabled&&<button className='bg-blue-500  text-white p-2 rounded-lg mt-5 w-20 h-10' onClick={handlePrevQuestion} disabled={isPrevDisabled}>Previous</button>}
                             </div>
-                            <div className ='mt-10'>
+                            {!isNextDisabled&&<div className ='mt-10'>
                                 <button className='bg-blue-500 text-white p-2 rounded-lg mt-5 w-20 h-10' onClick={handleNextQuestion} disabled={isNextDisabled}>Next</button>
-                            </div>
+                            </div>}
                         </div>
                     </div>
                     <button className='bg-blue-500 text-white p-2 rounded-lg mt-3 w-[15%]' onClick={handleSubmit}>Submit</button>

@@ -10,8 +10,33 @@ function Quiz() {
   const [CurrentQuestionIndex,setCurrentQuestionIndex]=useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [score,setscore]=useState(0);
-
+  const [isStarted, setisStarted] = useState(false);
   const navigate=useNavigate();
+
+  const instyle={
+    backgroundColor:"black",
+    display:"flex",
+    flexDirection: "column",
+    justifyContent:"center",
+    alignItems:"center",
+    height:"100vh",
+    width: "100vw",
+    position: "fixed",
+    top: 0,
+    left: 0,
+    color:"yellow",
+    fontSize:"40px",
+    paddingBottom:"100px"
+}
+const btstyle={
+    backgroundColor:"white",
+    color:"black",
+    padding:"10px",
+    margin:"10px",
+    borderRadius:"10px",
+    cursor:"pointer",
+    fontSize: "20px"
+}
 
   useEffect(() => {
     console.log('Selected option:', selectedOption);
@@ -66,6 +91,13 @@ function Quiz() {
 
   return (
     <>
+       {!isStarted&&
+       <div style={instyle}>
+          <h1>Quiz Game</h1>
+          <button onClick={()=>{setisStarted(true)}} style={btstyle}>Start Quiz</button>
+        </div>
+}
+      {isStarted &&
       <Questionbox props={currentQuestion} 
             func={setSelectedOption}
             handleNextQuestion={handleNextQuestion}
@@ -73,7 +105,7 @@ function Quiz() {
             isPrevDisabled={CurrentQuestionIndex === 0}
             isNextDisabled={CurrentQuestionIndex === questions.length-1}
             selectedOption={selectedOption}
-            handleSubmit={handleSubmit} />  
+            handleSubmit={handleSubmit} />  }
     </>
   );
 }
